@@ -8,4 +8,5 @@ import com.andreymasiero.beverage.model.Customer;
 public interface CustomerService {
     List<Customer> findAll();
     Customer findById(UUID id);
+    Customer save(Customer customer);
 }
