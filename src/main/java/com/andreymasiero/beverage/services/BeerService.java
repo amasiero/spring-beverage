@@ -9,4 +9,5 @@ import com.andreymasiero.beverage.model.Beer;
 public interface BeerService {
     List<Beer> findAll();
     Beer findById(UUID id);
+    Beer save(Beer beer);
 }
