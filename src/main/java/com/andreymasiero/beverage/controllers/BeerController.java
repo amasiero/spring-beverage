@@ -20,14 +20,14 @@ public class BeerController {
     private final BeerService beerService;
 
     @GetMapping
-    public List<Beer> listBeers() {
-        return beerService.listBeers();
+    public List<Beer> findAll() {
+        return beerService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Beer getBeer(@PathVariable UUID id) {
+    public Beer findById(@PathVariable UUID id) {
         log.debug("Controller called for the beer | ID: {}", id);
-        return beerService.getBeerById(id);
+        return beerService.findById(id);
     }
 }
 

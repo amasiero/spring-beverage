@@ -7,6 +7,6 @@ import com.andreymasiero.beverage.model.Beer;
 
 
 public interface BeerService {
-    List<Beer> listBeers();
-    Beer getBeerById(UUID id);
+    List<Beer> findAll();
+    Beer findById(UUID id);
 }

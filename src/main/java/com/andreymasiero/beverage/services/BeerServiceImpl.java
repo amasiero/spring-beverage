@@ -17,7 +17,7 @@ import com.andreymasiero.beverage.model.BeerStyle;
 @Service
 public class BeerServiceImpl implements BeerService {
 
-    private Map<UUID, Beer> beerMap;
+    private final Map<UUID, Beer> beerMap;
 
     public BeerServiceImpl() {
         this.beerMap = new HashMap<>();
@@ -63,12 +63,12 @@ public class BeerServiceImpl implements BeerService {
     }
 
     @Override
-    public List<Beer> listBeers() {
+    public List<Beer> findAll() {
         return new ArrayList<>(beerMap.values());
     }
 
     @Override
-    public Beer getBeerById(UUID id) {
+    public Beer findById(UUID id) {
         log.debug("Service called for the beer | ID: {}", id);
         return beerMap.get(id);
     }
